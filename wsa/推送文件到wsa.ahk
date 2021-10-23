@@ -1,4 +1,4 @@
-;ÉèÖÃadbÂ·¾¶£¬Èç¹ûÉèÖÃºÃ»·¾³±äÁ¿Ö±½ÓÓÃ±äÁ¿
+;è®¾ç½®adbè·¯å¾„ï¼Œå¦‚æœè®¾ç½®å¥½ç¯å¢ƒå˜é‡ç›´æ¥ç”¨å˜é‡
 global adbc :="adb"
 
 #z::
@@ -49,18 +49,19 @@ Explorer_GetSelection(hwnd="")
                 }
             }
             if upFold
-                MsgBox,²»Ö§³ÖÉÏ´«ÎÄ¼ş¼Ğ
+                MsgBox,ä¸æ”¯æŒä¸Šä¼ æ–‡ä»¶å¤¹
             else if upLink
-                MsgBox,²»Ö§³ÖÉÏ´«¿ì½İ·½Ê½
-            MsgBox,ÒÑÉÏ´«%num%¸öÎÄ¼ş
+                MsgBox,ä¸æ”¯æŒä¸Šä¼ å¿«æ·æ–¹å¼
+            MsgBox,å·²ä¸Šä¼ %num%ä¸ªæ–‡ä»¶
         }  
     ;return Trim(ToReturn,"`n")  
 }
 
 UpFile(path,name){
     c :=adbc " push """ path """ ""sdcard/Download/" name """ & " adbc " shell am broadcast -a android.intent.action.MEDIA_SCANNER_SCAN_FILE -d ""file:///storage/emulated/0/Download/" name """"
-    MsgBox,%c%
-    MsgBox % RunWaitOne(c)
+    ;MsgBox,%c%
+    ;MsgBox % 
+    RunWaitOne(c)
 }
 
 CheckAdb(){
@@ -76,20 +77,20 @@ CheckAdb(){
 }
 
 RunWaitOne(command) {
-    ; WshShell ¶ÔÏó: http://msdn.microsoft.com/en-us/library/aew9yb99
+    ; WshShell å¯¹è±¡: http://msdn.microsoft.com/en-us/library/aew9yb99
     shell := ComObjCreate("WScript.Shell")
-    ; Í¨¹ı cmd.exe Ö´ĞĞµ¥ÌõÃüÁî
+    ; é€šè¿‡ cmd.exe æ‰§è¡Œå•æ¡å‘½ä»¤
     exec := shell.Exec(ComSpec " /C " command)
-    ; ¶ÁÈ¡²¢·µ»ØÃüÁîµÄÊä³ö
+    ; è¯»å–å¹¶è¿”å›å‘½ä»¤çš„è¾“å‡º
     return exec.StdOut.ReadAll()
 }
 
 RunWaitMany(commands) {
     shell := ComObjCreate("WScript.Shell")
-    ; ´ò¿ª cmd.exe ½ûÓÃÃüÁîÏÔÊ¾
+    ; æ‰“å¼€ cmd.exe ç¦ç”¨å‘½ä»¤æ˜¾ç¤º
     exec := shell.Exec(ComSpec " /Q /K echo off")
-    ; ·¢ËÍ²¢Ö´ĞĞÃüÁî,Ê¹ÓÃĞÂĞĞ·Ö¸ô
-    exec.StdIn.WriteLine(commands "`nexit")  ; ±£Ö¤Ö´ĞĞÍê±ÏºóÍË³ö!
-    ; ¶ÁÈ¡²¢·µ»ØËùÓĞÃüÁîµÄÊä³ö
+    ; å‘é€å¹¶æ‰§è¡Œå‘½ä»¤,ä½¿ç”¨æ–°è¡Œåˆ†éš”
+    exec.StdIn.WriteLine(commands "`nexit")  ; ä¿è¯æ‰§è¡Œå®Œæ¯•åé€€å‡º!
+    ; è¯»å–å¹¶è¿”å›æ‰€æœ‰å‘½ä»¤çš„è¾“å‡º
     return exec.StdOut.ReadAll()
 }
