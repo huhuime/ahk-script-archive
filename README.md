@@ -51,3 +51,9 @@ AutoHotKey脚本
 1. adb无法连接时报错内容乱码
 2. 暂未支持文件夹直接上传
 3. 暂无法隐藏命令行窗口
+
+
+备注：
+- 部分代码参照来源，部分多余代码暂时未修剪：
+- https://www.autoahk.com/archives/8971
+- https://blog.csdn.net/liuyukuan/article/details/53399286
