@@ -17,7 +17,7 @@ AutoHotKey脚本
 
 1. 运行ank脚本或者直接下载exe文件直接运行
 
-#### 简易ahk脚本通过adb上传文件到wsa中使用说明
+#### 简易ahk脚本通过adb上传文件到wsa中使用说明（本脚本已重写，详见[https://gitee.com/huhuhuhu/ahk-script-archive/blob/master/new/index.md](https://gitee.com/huhuhuhu/ahk-script-archive/blob/master/new/index.md)）
 
 ##### 使用
 
@@ -25,7 +25,7 @@ AutoHotKey脚本
 
 在资源管理器中选中文件按快捷键`win+z`触发上传
 
-##### 安装
+##### 安装（此处为旧版，新版详见[https://gitee.com/huhuhuhu/ahk-script-archive/blob/master/new/index.md](https://gitee.com/huhuhuhu/ahk-script-archive/blob/master/new/index.md)）
  **下载adb并设置环境变量** （此处自行搜索教程，太多了，此处不在重复）
 
 方案一（使用ahk文件）：
