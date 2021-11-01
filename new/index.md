@@ -4,10 +4,6 @@
 
 ---
 
-### 预览效果
-
-
-
 ### 使用说明
 
 1. 运行ank脚本或者直接下载exe文件直接运行
@@ -41,6 +37,11 @@
 
 
  **以上安装方案任选其一** 
+
+### 预览效果
+
+![上传截图](https://images.gitee.com/uploads/images/2021/1101/124310_21f65d59_73755.gif "GIF1.gif")
+![上传文件](https://images.gitee.com/uploads/images/2021/1101/124336_6924f3be_73755.gif "GIF2.gif")
 
 ### 其他事项
 
